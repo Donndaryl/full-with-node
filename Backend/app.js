@@ -6,7 +6,7 @@ const Thing = require('./models/thing.js')
 const mongoose = require('mongoose')
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://donndaryl:diabie22NETWORK-@cluster0.j4n3bum.mongodb.net/?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://***:***@cluster0.j4n3bum.mongodb.net/?retryWrites=true&w=majority',
     { useNewUrlParser: true,
         useUnifiedTopology: true })
     .then(() => console.log('Connexion à MongoDB réussie !'))
