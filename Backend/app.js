@@ -1,6 +1,7 @@
 const express = require('express');
-const mongoose = require('mongoose')
-const route = require('./routes/route')
+const mongoose = require('mongoose');
+const route = require('./routes/route');
+const userRoute = require('./routes/user');
 const bodyParser = require('body-parser');
 
 mongoose.connect('mongodb+srv://donndaryl:diabie22NETWORK-@cluster0.j4n3bum.mongodb.net/?retryWrites=true&w=majority', {
@@ -19,4 +20,5 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 app.use('/api/stuff', route);
+app.use('/api/auth', userRoute);
 module.exports = app; 
